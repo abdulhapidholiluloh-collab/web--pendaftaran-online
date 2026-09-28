@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pendaftaran | SMK Al-Falah Bandung</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>A</b><span>SMK Al-Falah<br>Bandung</span></a>
+    <nav aria-label="Menu utama"><a href="index.html#faq">Butuh bantuan?</a></nav>
+    <a class="btn btn-emas" href="index.html">Kembali ke beranda</a>
+  </div>
+</header>
+
+<main class="halaman-form">
+  <div class="wrap-form">
+    <h1>Pendaftaran siswa baru 2027/2028</h1>
+    <p class="pengantar">Isi data sesuai dokumen resmi (Kartu Keluarga dan ijazah). Siapkan NIK dan NISN. Sekitar 10 menit.</p>
+
+    <form id="form-daftar" novalidate>
+
+      <fieldset>
+        <legend>Data calon siswa</legend>
+        <div class="baris">
+          <div class="kolom penuh">
+            <label for="nik">NIK <small>(16 angka, sesuai Kartu Keluarga)</small></label>
+            <input id="nik" name="nik" inputmode="numeric" maxlength="16" autocomplete="off" aria-describedby="hint-nik err-nik">
+            <div class="bantu"><span id="hitung-nik">0/16</span> <span id="hint-nik"></span></div>
+            <div class="galat" id="err-nik" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="nisn">NISN <small>(10 angka)</small></label>
+            <input id="nisn" name="nisn" inputmode="numeric" maxlength="10" autocomplete="off" aria-describedby="err-nisn">
+            <div class="galat" id="err-nisn" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="nama">Nama lengkap</label>
+            <input id="nama" name="nama" autocomplete="name" aria-describedby="err-nama">
+            <div class="galat" id="err-nama" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="tempat_lahir">Tempat lahir</label>
+            <input id="tempat_lahir" name="tempat_lahir" aria-describedby="err-tempat_lahir">
+            <div class="galat" id="err-tempat_lahir" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="tanggal_lahir">Tanggal lahir</label>
+            <input id="tanggal_lahir" name="tanggal_lahir" type="date" aria-describedby="err-tanggal_lahir">
+            <div class="galat" id="err-tanggal_lahir" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="jenis_kelamin">Jenis kelamin</label>
+            <select id="jenis_kelamin" name="jenis_kelamin" aria-describedby="err-jenis_kelamin">
+              <option value="">Pilih</option><option value="L">Laki-laki</option><option value="P">Perempuan</option>
+            </select>
+            <div class="galat" id="err-jenis_kelamin" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="asal_sekolah">Asal sekolah (SMP/MTs)</label>
+            <input id="asal_sekolah" name="asal_sekolah" aria-describedby="err-asal_sekolah">
+            <div class="galat" id="err-asal_sekolah" role="alert"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Alamat dan kontak</legend>
+        <div class="baris">
+          <div class="kolom penuh">
+            <label for="alamat">Alamat lengkap</label>
+            <textarea id="alamat" name="alamat" rows="3" autocomplete="street-address" aria-describedby="err-alamat"></textarea>
+            <div class="galat" id="err-alamat" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="wa">Nomor WhatsApp siswa</label>
+            <input id="wa" name="wa" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx" autocomplete="tel" aria-describedby="err-wa">
+            <div class="galat" id="err-wa" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" aria-describedby="err-email">
+            <div class="galat" id="err-email" role="alert"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Orang tua atau wali</legend>
+        <div class="baris">
+          <div class="kolom">
+            <label for="nama_ortu">Nama orang tua atau wali</label>
+            <input id="nama_ortu" name="nama_ortu" aria-describedby="err-nama_ortu">
+            <div class="galat" id="err-nama_ortu" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="wa_ortu">Nomor WhatsApp orang tua</label>
+            <input id="wa_ortu" name="wa_ortu" type="tel" inputmode="tel" placeholder="08xxxxxxxxxx" aria-describedby="err-wa_ortu">
+            <div class="galat" id="err-wa_ortu" role="alert"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pilihan jurusan</legend>
+        <div class="baris">
+          <div class="kolom">
+            <label for="jurusan1">Pilihan 1</label>
+            <select id="jurusan1" name="jurusan1" aria-describedby="err-jurusan1"></select>
+            <div class="galat" id="err-jurusan1" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="jurusan2">Pilihan 2 <small>(boleh dikosongkan)</small></label>
+            <select id="jurusan2" name="jurusan2" aria-describedby="err-jurusan2"></select>
+            <div class="galat" id="err-jurusan2" role="alert"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Akun</legend>
+        <p class="bantu">Login memakai NIK dan kata sandi ini untuk melengkapi berkas dan melihat hasil.</p>
+        <div class="baris">
+          <div class="kolom">
+            <label for="password">Kata sandi <small>(minimal 8 karakter)</small></label>
+            <input id="password" name="password" type="password" autocomplete="new-password" aria-describedby="err-password">
+            <div class="galat" id="err-password" role="alert"></div>
+          </div>
+          <div class="kolom">
+            <label for="password2">Ulangi kata sandi</label>
+            <input id="password2" name="password2" type="password" autocomplete="new-password" aria-describedby="err-password2">
+            <div class="galat" id="err-password2" role="alert"></div>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="setuju">
+        <label><input type="checkbox" id="setuju" name="setuju" aria-describedby="err-setuju"> Data yang saya isi benar. Saya setuju data pribadi saya, termasuk NIK, dipakai panitia hanya untuk proses penerimaan siswa baru.</label>
+        <div class="galat" id="err-setuju" role="alert"></div>
+      </div>
+
+      <div class="galat umum" id="err-umum" role="alert"></div>
+      <button class="btn btn-hijau besar" type="submit" id="kirim">Kirim pendaftaran</button>
+    </form>
+
+    <section class="sukses" id="sukses" hidden tabindex="-1">
+      <h2>Pendaftaran terkirim</h2>
+      <p>Nomor pendaftaranmu:</p>
+      <p class="nomor" id="nomor-daftar"></p>
+      <p>Simpan nomor ini untuk cek status. Panitia akan menghubungi lewat WhatsApp setelah data diperiksa.</p>
+      <a class="btn btn-emas" href="index.html#cek">Cek status pendaftaran</a>
+    </section>
+  </div>
+</main>
+
+<div class="bawah"><div class="wrap"><span>© 2026 SMK Al-Falah Bandung</span><a href="index.html#kontak">Kontak panitia</a></div></div>
+
+<script src="daftar.js" defer></script>
+</body>
+</html>

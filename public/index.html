@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penerimaan Siswa Baru | SMK Al-Falah Bandung</title>
+<meta name="description" content="Pendaftaran peserta didik baru SMK Al-Falah Bandung tahun ajaran 2027/2028.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#atas"><b>A</b><span>SMK Al-Falah<br>Bandung</span></a>
+    <nav aria-label="Menu utama">
+      <a href="#pendaftaran">Penerimaan</a>
+      <a href="#jurusan">Jurusan</a>
+      <a href="#mengapa">Kehidupan Sekolah</a>
+      <a href="#biaya">Biaya</a>
+      <a href="#faq">Tanya Jawab</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a class="btn btn-emas" href="daftar.html">Daftar</a>
+  </div>
+</header>
+
+<aside class="cepat" id="cepat" aria-label="Tautan cepat">
+  <button type="button" id="tgl-cepat" aria-label="Buka atau tutup tautan cepat">»</button>
+  <a href="/brosur.pdf">Brosur PPDB</a>
+  <a href="#kunjungi">Daftar acara open house</a>
+  <a href="#pendaftaran">Panduan pendaftaran</a>
+  <a href="daftar.html">Daftar sekarang</a>
+</aside>
+
+<main id="atas">
+  <div class="hero foto" style="background-image:url(img/gedung.jpg)">
+    <div class="kotak">
+      <h1>Siap kerja, siap kuliah, siap jadi pribadi berakhlak.</h1>
+      <p>Penerimaan siswa baru tahun ajaran 2027/2028 dibuka. Daftar online dari rumah.</p>
+      <a class="btn btn-emas" href="daftar.html">Daftar sekarang</a>
+    </div>
+  </div>
+
+  <section id="pendaftaran">
+    <div class="wrap dua">
+      <div class="panel terang">
+        <h2>Cara mendaftar</h2>
+        <p>Buat akun, isi formulir, unggah berkas, lalu tunggu verifikasi panitia. Semua lewat website ini.</p>
+        <div class="tautan"><strong>Tautan cepat</strong>
+          <ul>
+            <li><a href="daftar.html">Buat akun dan mulai daftar</a></li>
+            <li><a href="#faq">Syarat berkas</a></li>
+            <li><a href="#jurusan">Pilihan jurusan</a></li>
+            <li><a href="#biaya">Biaya dan keringanan</a></li>
+            <li><a href="#cek">Cek status pendaftaran</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel gelap">
+        <h2>Batas waktu pendaftaran</h2>
+        <div id="daftar-batas"></div>
+        <p class="catatan" style="color:#9aa39d">Tanggal contoh. Ganti sesuai keputusan panitia.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cek" style="padding-top:0">
+    <div class="wrap">
+      <div class="panel terang">
+        <h2>Cek status pendaftaran</h2>
+        <p>Sudah daftar? Masukkan nomor pendaftaranmu.</p>
+        <!-- Nanti: kirim ke API, cari di tabel pendaftar (PostgreSQL) -->
+        <form class="cek" id="form-cek" novalidate>
+          <label for="no-daftar" hidden>Nomor pendaftaran</label>
+          <input id="no-daftar" placeholder="Contoh: 2027-00123" autocomplete="off">
+          <button class="btn btn-hijau" type="submit">Cek status</button>
+        </form>
+        <div id="hasil-cek" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kunjungi" style="padding-top:0">
+    <div class="wrap dua kunjungi">
+      <div class="panel terang">
+        <h2>Kunjungi dan terhubung</h2>
+        <p>Datang langsung ke sekolah atau ikuti tur virtual. Panitia siap menjawab pertanyaan orang tua dan calon siswa.</p>
+        <div class="tautan"><strong>Tautan cepat</strong>
+          <ul>
+            <li><a href="#">Jadwal open house</a></li>
+            <li><a href="#">Tur virtual sekolah</a></li>
+            <li><a href="#">Cerita alumni</a></li>
+            <li><a href="#kontak">Hubungi panitia</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foto" data-ph="Foto kegiatan sekolah"><a class="tur" href="#">Ikuti tur virtual</a></div>
+    </div>
+  </section>
+
+  <section class="mengapa" id="mengapa">
+    <div class="wrap">
+      <h2>Mengapa SMK Al-Falah?</h2>
+      <p class="intro">Belajar keahlian di bengkel dan laboratorium, dibimbing guru yang dekat dengan siswa, dalam suasana yang menjaga akhlak.</p>
+      <div class="grid4">
+        <div><div class="foto" data-ph="Foto lab"></div><h3>Praktik langsung</h3><p>Lab komputer dan bengkel untuk latihan setiap minggu.</p></div>
+        <div><div class="foto" data-ph="Foto PKL"></div><h3>Magang di industri</h3><p>Praktik kerja lapangan bersama mitra dunia usaha.</p></div>
+        <div><div class="foto" data-ph="Foto ekskul"></div><h3>Ekstrakurikuler</h3><p>Olahraga, seni, dan kegiatan keagamaan.</p></div>
+        <div><div class="foto" data-ph="Foto siswa"></div><h3>Pembinaan akhlak</h3><p>Pembiasaan ibadah dan karakter setiap hari.</p></div>
+      </div>
+      <p class="catatan" style="color:#9aa39d">Isi kartu di atas contoh. Sesuaikan dengan keunggulan sekolah.</p>
+    </div>
+  </section>
+
+  <section id="jurusan">
+    <div class="wrap">
+      <h2 class="judul">Pilih jurusan</h2>
+      <p class="sub">Pilih sesuai minat. Kamu bisa memilih lebih dari satu jurusan saat mendaftar.</p>
+      <div class="jur" id="daftar-jurusan"></div>
+      <p class="catatan">Jurusan dan kuota contoh. Ganti dengan data asli.</p>
+    </div>
+  </section>
+
+  <section id="biaya" style="padding-top:0">
+    <div class="wrap">
+      <div class="biaya">
+        <h2>Biaya pendidikan dan keringanan</h2>
+        <div>
+          <p>[Isi ringkasan biaya masuk, SPP, dan program keringanan atau beasiswa sesuai kebijakan sekolah.]</p>
+          <p style="margin-top:12px"><a class="btn btn-hijau" href="#">Lihat rincian biaya</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="wrap isi">
+      <div><h2 class="judul">Pertanyaan yang sering diajukan</h2><p class="sub">Belum ketemu jawabannya? Tanya panitia lewat WhatsApp.</p></div>
+      <div>
+        <details><summary>Berkas apa saja yang harus disiapkan?</summary><p>Ijazah atau surat keterangan lulus, Kartu Keluarga, akta kelahiran, pas foto, dan rapor semester terakhir. Format JPG, PNG, atau PDF, maksimal 2 MB per berkas.</p></details>
+        <details><summary>Apakah pendaftaran bisa dilakukan di sekolah?</summary><p>Bisa. Datang ke sekretariat panitia pada jam layanan, petugas akan membantu mengisi formulir.</p></details>
+        <details><summary>Bagaimana cara tahu hasil seleksi?</summary><p>Hasil diumumkan di website ini. Masukkan nomor pendaftaran di kolom cek status.</p></details>
+        <details><summary>Apakah ada jalur khusus atau keringanan biaya?</summary><p>[Isi sesuai kebijakan sekolah.]</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="kontak">
+  <div class="foot">
+    <div class="peta">
+      <div class="foto" data-ph="Ganti dengan peta Google Maps"></div>
+      <p><strong>SMK Al-Falah Bandung</strong><br>[Alamat lengkap], Bandung, Jawa Barat</p>
+      <p style="margin-top:10px"><strong>Panitia SPMB</strong><br>WhatsApp [nomor] · Email [email]<br>Senin–Jumat 08.00–15.00 WIB</p>
+    </div>
+    <div class="link">
+      <div class="baris"><strong style="font-family:var(--judul)">Tautan bermanfaat</strong>
+        <ul><li><a href="#faq">Pertanyaan umum</a></li><li><a href="daftar.html">Portal pendaftar</a></li><li><a href="#">Daftar siswa diterima</a></li><li><a href="#kontak">Hubungi kami</a></li></ul></div>
+      <div class="baris"><strong style="font-family:var(--judul)">Sumber daya sekolah</strong>
+        <ul><li><a href="#">Kalender akademik</a></li><li><a href="#">Profil sekolah</a></li><li><a href="#">Visi dan misi</a></li><li><a href="#">Galeri</a></li></ul></div>
+    </div>
+  </div>
+  <div class="bawah"><div class="wrap">
+    <span>© 2026 SMK Al-Falah Bandung</span>
+    <span><a href="#">Kebijakan privasi</a><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">TikTok</a></span>
+  </div></div>
+</footer>
+
+<div class="chat" id="chat">
+  <div class="kepala"><span>Tanya panitia</span><button type="button" id="tgl-chat" aria-label="Tutup atau buka kotak tanya">×</button></div>
+  <div class="badan">Ada pertanyaan soal pendaftaran? <a href="https://wa.me/620000000000"><strong>Chat lewat WhatsApp</strong></a></div>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
